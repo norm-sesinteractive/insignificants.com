@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playtest Participation Terms | insignificANTS</title>
+<meta name="description" content="Terms of participation for the insignificANTS closed playtest from SES Interactive.">
+<link rel="icon" type="image/svg+xml" href="insignificants_favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #D94436;
+  --red-hover: #E55C4E;
+  --bg: #0A0807;
+  --bg-2: #14110F;
+  --surface: #1C1815;
+  --border: #2A2622;
+  --text: #F5EFE8;
+  --text-2: #A39B92;
+  --text-3: #6B6660;
+  --display: 'Montserrat', system-ui, sans-serif;
+  --body: 'Inter Tight', system-ui, sans-serif;
+  --xs: 0.5rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2.5rem;
+  --xl: 4rem;
+  --xxl: 6rem;
+  --xxxl: 9rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 var(--md);
+  position: relative;
+  z-index: 2;
+}
+.wrap.narrow { max-width: 740px; }
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding: var(--sm) 0;
+  background: rgba(10, 8, 7, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.nav.scrolled {
+  background: rgba(10, 8, 7, 0.94);
+  border-bottom-color: var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--md);
+}
+.nav-logo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.nav-logo .ants { color: var(--red); }
+.nav-links {
+  display: flex;
+  gap: var(--lg);
+  list-style: none;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.nav-links a {
+  color: var(--text-2);
+  position: relative;
+  padding: var(--xs) 0;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.cta {
+  color: var(--text);
+  background: var(--red);
+  padding: 0.5rem 1.125rem;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-links a.cta:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .nav-links { gap: var(--sm); }
+  .nav-links li:not(:last-child) { display: none; }
+}
+
+.doc-hero {
+  padding: calc(var(--xxxl) + var(--xl)) 0 var(--xl);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.doc-hero::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(217, 68, 54, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.doc-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--xs);
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--lg);
+  transition: color 0.2s, gap 0.2s;
+}
+.doc-back::before { content: '←'; }
+.doc-back:hover {
+  color: var(--red);
+  gap: var(--sm);
+}
+.doc-eyebrow {
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: var(--md);
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+}
+.doc-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.doc-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--md);
+  max-width: 18ch;
+}
+.doc-meta {
+  font-size: 0.875rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--md);
+}
+.doc-intro {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  max-width: 60ch;
+}
+
+.doc-main {
+  padding: var(--xxl) 0;
+}
+.doc-section {
+  margin-bottom: var(--xl);
+}
+.doc-section:last-child { margin-bottom: 0; }
+.doc-section h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--md);
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: var(--sm);
+}
+.doc-section h2 .num {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  flex-shrink: 0;
+  min-width: 2ch;
+}
+.doc-section p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin-bottom: var(--md);
+}
+.doc-section p:last-child { margin-bottom: 0; }
+.doc-section p em {
+  font-style: italic;
+  color: var(--text);
+}
+.doc-section strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.doc-section ul {
+  list-style: none;
+  margin: var(--md) 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--xs);
+}
+.doc-section ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.doc-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.doc-section a {
+  color: var(--red);
+  border-bottom: 1px solid rgba(217, 68, 54, 0.3);
+  transition: border-color 0.2s;
+}
+.doc-section a:hover { border-bottom-color: var(--red); }
+
+.doc-callout {
+  margin: var(--lg) 0;
+  padding: var(--md) var(--lg);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.doc-callout strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: var(--xs);
+}
+
+.doc-footer-cta {
+  margin-top: var(--xxl);
+  padding-top: var(--xl);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.doc-footer-cta p {
+  font-size: 1rem;
+  color: var(--text-2);
+  margin-bottom: var(--md);
+}
+.btn {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.875rem 1.625rem;
+  border-radius: 999px;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--xs);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--red);
+  color: var(--text);
+}
+.btn-primary:hover {
+  background: var(--red-hover);
+  transform: translateY(-2px);
+}
+
+.footer {
+  padding: var(--xl) 0 var(--lg);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--lg);
+  margin-bottom: var(--lg);
+}
+.footer-brand {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: var(--sm);
+}
+.footer-brand .ants { color: var(--red); }
+.footer-tagline {
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  max-width: 36ch;
+}
+.footer-tagline a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.footer-col h4 {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--sm);
+}
+.footer-col a {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  margin-bottom: var(--xs);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--red); }
+.footer-legal {
+  padding-top: var(--md);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--md);
+  font-size: 0.8125rem;
+  color: var(--text-3);
+}
+
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--md);
+  }
+  .footer-legal {
+    flex-direction: column;
+    gap: var(--xs);
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">insignific<span class="ants">ANTS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="https://sesinteractive.com">Studio</a></li>
+      <li><a href="index.html#playtest" class="cta">Join Playtest</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="doc-hero">
+  <div class="wrap narrow">
+    <a href="index.html" class="doc-back">Back to insignificANTS</a>
+    <p class="doc-eyebrow">For applicants</p>
+    <h1 class="doc-title">Playtest Participation Terms</h1>
+    <p class="doc-meta">Last updated: May 24, 2026</p>
+    <p class="doc-intro">
+      These terms describe what to expect if you apply for and participate in the insignificANTS closed playtest. By submitting an application, you confirm you have read and agreed to them. The playtest is operated by Someone Else's Shoes Interactive LLC, a Michigan-based independent game studio.
+    </p>
+  </div>
+</header>
+
+<main class="doc-main">
+  <div class="wrap narrow">
+
+    <section class="doc-section">
+      <h2><span class="num">01</span> Eligibility</h2>
+      <p>
+        To apply for the playtest, you must be at least 18 years of age. We may further restrict participation based on platform availability, language support, geographic region, or other practical considerations. We test on iOS and Android devices, and you'll need access to one of these to participate meaningfully. The playtest is not yet open. Sign up now to be considered when the first round begins.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">02</span> Discretion to admit and remove</h2>
+      <p>Participation in the playtest is by application and at our sole discretion. We reserve the right to:</p>
+      <ul>
+        <li>Accept or decline any applicant, without explanation</li>
+        <li>Remove any participant from the playtest at any time, for any reason</li>
+        <li>Limit the size of the closed playtest</li>
+        <li>End the closed playtest when we determine the game is ready for public release</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">03</span> What you receive</h2>
+      <p>If accepted, you will receive:</p>
+      <ul>
+        <li>Access to pre-release builds of insignificANTS, delivered through Apple TestFlight, Google Play Internal Testing, or a similar distribution channel</li>
+        <li>A channel to provide feedback, typically through email, an in-app form, or a community space</li>
+        <li>Notifications when new builds become available</li>
+      </ul>
+      <p>
+        Playtest access is provided free of charge. We do not pay playtest participants, and we do not charge for playtest access.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">04</span> Confidentiality</h2>
+      <p>
+        Playtest builds are pre-release software not intended for the general public. As a participant, you agree not to publicly share screenshots, video, gameplay footage, or detailed mechanical descriptions of unreleased content without our written permission. You also agree not to share build files, login credentials, or playtest access with anyone else.
+      </p>
+      <p>
+        Discussing high-level impressions is fine ("I'm in the insignificANTS playtest and finding it interesting"). Sharing specific spoilers, detailed pre-release content, or recordings of unreleased features is not.
+      </p>
+      <p>
+        Content creators interested in covering the playtest should reach out separately at <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a> for permission and arrangements.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">05</span> Feedback and ideas</h2>
+      <p>
+        When you provide feedback, suggestions, bug reports, or ideas during the playtest, you grant SES Interactive a perpetual, royalty-free, irrevocable, transferable license to use that feedback to improve the game and our other products, without any obligation to attribute, compensate, or acknowledge you.
+      </p>
+      <div class="doc-callout">
+        <strong>In plain English</strong>
+        If you suggest something and we use it, we don't owe you anything for it. This is standard for closed playtests and exists so we can act on community feedback without legal risk on either side.
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">06</span> Credits</h2>
+      <p>
+        We may, at our sole discretion, include playtest participants in the game's release credits as a thank-you. Inclusion is not guaranteed and is at our discretion. We typically prioritize participants who provide substantial, constructive feedback over those who only install and play.
+      </p>
+      <p>
+        If included, your name or chosen handle will appear as you provided it during signup. You may request to be removed from credits at any time before the game releases by emailing us.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">07</span> No employment or business relationship</h2>
+      <p>
+        Playtest participation is unpaid and creates no employment, contractor, partnership, joint venture, or business relationship between you and SES Interactive. You participate as a volunteer testing pre-release software because you find it interesting.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">08</span> Personal information</h2>
+      <p>
+        We collect the information you provide during signup, typically including your email address, name or handle, and information about your interest in ants and games. We use this information to operate the closed playtest, communicate about the game's eventual release, and decide who to admit.
+      </p>
+      <p>
+        We do not sell or share your personal information with third parties. You may request removal from the closed playtest and deletion of your personal information at any time by emailing <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">09</span> The game is in development</h2>
+      <p>
+        The playtest builds reflect a work in progress. Features may be incomplete, broken, or absent entirely. Performance may be inconsistent. Save data may not transfer between builds. Content you encounter in the playtest may change significantly or be removed before public release. The final released game will differ from any version you play during the playtest.
+      </p>
+      <p>
+        We make no warranties about the playtest builds. Use them at your own discretion, and don't rely on them for anything important.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">10</span> Changes to these terms</h2>
+      <p>
+        We may update these terms as the closed playtest evolves. Significant changes will be communicated to active participants via email. The "Last updated" date at the top of this page reflects the most recent revision.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">11</span> Contact</h2>
+      <p>
+        Questions about the closed playtest or these terms can be sent to <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>.
+      </p>
+    </section>
+
+    <div class="doc-footer-cta">
+      <p>Ready to apply?</p>
+      <a href="index.html#playtest" class="btn btn-primary">Back to playtest signup</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">insignific<span class="ants">ANTS</span></div>
+        <p class="footer-tagline">A mobile ant colony simulator from <a href="https://sesinteractive.com">SES Interactive</a>.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The Game</h4>
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#playtest">Closed playtest</a>
+        <a href="playtest-terms.html">Playtest terms</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>
+        <a href="https://sesinteractive.com">SES Interactive</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; 2026 Someone Else's Shoes Interactive LLC. All rights reserved.</span>
+      <span>insignificANTS&trade; is a trademark of SES Interactive.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+let scrolled = false;
+window.addEventListener('scroll', () => {
+  const s = window.scrollY > 20;
+  if (s !== scrolled) {
+    nav.classList.toggle('scrolled', s);
+    scrolled = s;
+  }
+}, { passive: true });
+</script>
+</body>
+</html>

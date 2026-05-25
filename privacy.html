@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Notice | insignificANTS</title>
+<meta name="description" content="Privacy notice for insignificants.com from Someone Else's Shoes Interactive LLC.">
+<link rel="icon" type="image/svg+xml" href="insignificants_favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #D94436;
+  --red-hover: #E55C4E;
+  --bg: #0A0807;
+  --bg-2: #14110F;
+  --surface: #1C1815;
+  --border: #2A2622;
+  --text: #F5EFE8;
+  --text-2: #A39B92;
+  --text-3: #6B6660;
+  --display: 'Montserrat', system-ui, sans-serif;
+  --body: 'Inter Tight', system-ui, sans-serif;
+  --xs: 0.5rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2.5rem;
+  --xl: 4rem;
+  --xxl: 6rem;
+  --xxxl: 9rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 var(--md);
+  position: relative;
+  z-index: 2;
+}
+.wrap.narrow { max-width: 740px; }
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  padding: var(--sm) 0;
+  background: rgba(10, 8, 7, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+.nav.scrolled {
+  background: rgba(10, 8, 7, 0.94);
+  border-bottom-color: var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--md);
+}
+.nav-logo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.nav-logo .ants { color: var(--red); }
+.nav-links {
+  display: flex;
+  gap: var(--lg);
+  list-style: none;
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.nav-links a {
+  color: var(--text-2);
+  position: relative;
+  padding: var(--xs) 0;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.cta {
+  color: var(--text);
+  background: var(--red);
+  padding: 0.5rem 1.125rem;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-links a.cta:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .nav-links { gap: var(--sm); }
+  .nav-links li:not(:last-child) { display: none; }
+}
+
+.doc-hero {
+  padding: calc(var(--xxxl) + var(--xl)) 0 var(--xl);
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.doc-hero::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(217, 68, 54, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.doc-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--xs);
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--lg);
+  transition: color 0.2s, gap 0.2s;
+}
+.doc-back::before { content: '←'; }
+.doc-back:hover {
+  color: var(--red);
+  gap: var(--sm);
+}
+.doc-eyebrow {
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: var(--md);
+  display: flex;
+  align-items: center;
+  gap: var(--sm);
+}
+.doc-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.doc-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--md);
+  max-width: 18ch;
+}
+.doc-meta {
+  font-size: 0.875rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--md);
+}
+.doc-intro {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  max-width: 60ch;
+}
+
+.doc-main {
+  padding: var(--xxl) 0;
+}
+.doc-section {
+  margin-bottom: var(--xl);
+}
+.doc-section:last-child { margin-bottom: 0; }
+.doc-section h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--md);
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: var(--sm);
+}
+.doc-section h2 .num {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  flex-shrink: 0;
+  min-width: 2ch;
+}
+.doc-section p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin-bottom: var(--md);
+}
+.doc-section p:last-child { margin-bottom: 0; }
+.doc-section strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.doc-section ul {
+  list-style: none;
+  margin: var(--md) 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--xs);
+}
+.doc-section ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.doc-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.doc-section a {
+  color: var(--red);
+  border-bottom: 1px solid rgba(217, 68, 54, 0.3);
+  transition: border-color 0.2s;
+}
+.doc-section a:hover { border-bottom-color: var(--red); }
+
+.footer {
+  padding: var(--xl) 0 var(--lg);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--lg);
+  margin-bottom: var(--lg);
+}
+.footer-brand {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: var(--sm);
+}
+.footer-brand .ants { color: var(--red); }
+.footer-tagline {
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  line-height: 1.5;
+  max-width: 36ch;
+}
+.footer-tagline a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.footer-col h4 {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--sm);
+}
+.footer-col a {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-2);
+  margin-bottom: var(--xs);
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--red); }
+.footer-legal {
+  padding-top: var(--md);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--md);
+  font-size: 0.8125rem;
+  color: var(--text-3);
+}
+.footer-legal a {
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s;
+  margin-left: var(--sm);
+}
+.footer-legal a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--md);
+  }
+  .footer-legal {
+    flex-direction: column;
+    gap: var(--xs);
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">insignific<span class="ants">ANTS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="https://sesinteractive.com">Studio</a></li>
+      <li><a href="index.html#playtest" class="cta">Join Playtest</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="doc-hero">
+  <div class="wrap narrow">
+    <a href="index.html" class="doc-back">Back to insignificANTS</a>
+    <p class="doc-eyebrow">For visitors</p>
+    <h1 class="doc-title">Privacy Notice</h1>
+    <p class="doc-meta">Last updated: May 25, 2026</p>
+    <p class="doc-intro">
+      This notice describes what information is collected when you visit insignificants.com or contact us, and how that information is used. If you apply for the closed playtest, the <a href="playtest-terms.html">playtest participation terms</a> describe how that specific information is handled.
+    </p>
+  </div>
+</header>
+
+<main class="doc-main">
+  <div class="wrap narrow">
+
+    <section class="doc-section">
+      <h2><span class="num">01</span> Who we are</h2>
+      <p>
+        insignificANTS is developed by Someone Else's Shoes Interactive LLC ("SES Interactive," "we," "us"), a Michigan-based independent game studio. We can be contacted at <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">02</span> What this site collects</h2>
+      <p>
+        The insignificants.com website is a static information site. It does not set cookies, run analytics, collect personal information directly through forms or logins, track your browsing activity, or display advertisements.
+      </p>
+      <p>
+        When you visit, your browser exchanges some technical information with the server hosting the site (GitHub Pages), including your IP address, the page you requested, your user agent string, and timing. This is standard for any web browsing and is logged by GitHub for operational and security purposes per their own privacy policy.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">03</span> Third-party services</h2>
+      <p>
+        To display the site and offer playtest signup, your browser interacts with a few resources from third parties:
+      </p>
+      <ul>
+        <li><strong>Google Fonts.</strong> Font files are loaded from fonts.googleapis.com when you open a page. Google's servers see your IP address and basic browser information. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
+        <li><strong>Google Forms.</strong> The playtest signup link directs you to a Google Form. If you choose to submit an application, the information you provide is collected by Google on our behalf and made available to us via Google Workspace. Google's privacy policy also applies.</li>
+      </ul>
+      <p>
+        These are the only third-party services involved with the site itself. The game (when released) will have its own data practices, disclosed in app store listings and an in-app privacy policy at that time.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">04</span> If you email us</h2>
+      <p>
+        If you send a message to <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a> or any other studio email address, that email is received and stored in Google Workspace, operated by Google LLC. We retain the content of correspondence as needed to respond, maintain records, and prevent abuse. We don't share your email content with anyone outside the studio without your permission.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">05</span> The playtest program</h2>
+      <p>
+        If you apply for or participate in the closed playtest, additional terms apply that describe how that information is collected and used. See the <a href="playtest-terms.html">playtest participation terms</a> for those details. The signup form itself is hosted by Google Forms.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">06</span> External links</h2>
+      <p>
+        The site contains links to other websites, including the studio site at sesinteractive.com, the playtest signup form on Google Forms, and potentially press coverage or partner sites in the future. Once you click a link to a third-party site, that site's own privacy policy applies. We don't control what those sites do.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">07</span> Children</h2>
+      <p>
+        The site is not directed at children under 13. We don't knowingly collect personal information from children. Playtest participants must be at least 18 years of age per the playtest terms. If you believe we've inadvertently received information from a child under 13, contact us and we'll delete it.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">08</span> Your rights</h2>
+      <p>
+        If we have information about you, typically because you've emailed us or signed up for the playtest, you can:
+      </p>
+      <ul>
+        <li>Request a copy of what we have</li>
+        <li>Request that we correct or delete it</li>
+        <li>Request that we stop using it for any purpose</li>
+      </ul>
+      <p>
+        Email <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a> with the request and we'll respond within a reasonable time. Depending on your jurisdiction, you may have additional rights under laws like the General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA). We honor these regardless of where you're located.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">09</span> Changes to this notice</h2>
+      <p>
+        We may update this notice as the game's development and the studio's activities evolve. The "Last updated" date at the top reflects the most recent revision. Significant changes will be noted at the top of the page or, where appropriate, communicated to playtest participants by email.
+      </p>
+    </section>
+
+    <section class="doc-section">
+      <h2><span class="num">10</span> Contact</h2>
+      <p>
+        Questions about this notice or your information: <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">insignific<span class="ants">ANTS</span></div>
+        <p class="footer-tagline">A mobile ant colony simulator from <a href="https://sesinteractive.com">SES Interactive</a>.</p>
+      </div>
+      <div class="footer-col">
+        <h4>The Game</h4>
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#playtest">Playtest</a>
+        <a href="playtest-terms.html">Playtest terms</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@sesinteractive.com">hello@sesinteractive.com</a>
+        <a href="https://sesinteractive.com">SES Interactive</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; 2026 Someone Else's Shoes Interactive LLC. All rights reserved. <a href="privacy.html">Privacy</a></span>
+      <span>insignificANTS&trade; is a trademark of SES Interactive.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+let scrolled = false;
+window.addEventListener('scroll', () => {
+  const s = window.scrollY > 20;
+  if (s !== scrolled) {
+    nav.classList.toggle('scrolled', s);
+    scrolled = s;
+  }
+}, { passive: true });
+</script>
+</body>
+</html>
