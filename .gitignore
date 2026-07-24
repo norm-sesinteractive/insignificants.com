@@ -7,3 +7,6 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Internal working docs — keep local, never publish to the public site
+PRIVACY_POLICY_HANDOFF.md
